@@ -4,6 +4,8 @@
   "description": "This is my first react app.",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -21,9 +23,14 @@
   },
   "homepage": "https://github.com/Shubhi-0/first-react-project#readme",
   "devDependencies": {
-    "parcel": "^2.11.0"
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
   },
   "browsers": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
