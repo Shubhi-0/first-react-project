@@ -1,0 +1,29 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is my first react app.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubhi-0/first-react-project.git"
+  },
+  "keywords": [
+    "react",
+    "first"
+  ],
+  "author": "Shubhi Upadhyay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubhi-0/first-react-project/issues"
+  },
+  "homepage": "https://github.com/Shubhi-0/first-react-project#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  },
+  "browsers": [
+    "last 2 versions"
+  ]
+}
