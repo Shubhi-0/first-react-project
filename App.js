@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Header } from "./FoodDelivery";
 
 // const heading = React.createElement("h1", { id: "heading" }, "This is heading");
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //React element
 const jsxHeading = <h1 id="jsxHeading">This is JSX Heading</h1>;
@@ -42,4 +43,6 @@ const NestedHeading = () => (
   </div>
 );
 
-root.render(<NestedHeading />);
+//creating our first app: 20/02
+
+// root.render(<Header />);
