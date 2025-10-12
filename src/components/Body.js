@@ -25,7 +25,7 @@ const Body = () => {
     setListOfRes(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setFilteredRestaurantList(listOfRes);   
+    setFilteredRestaurantList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);   
     // console.log("data->");
     // console.log(json);
     // console.log("data->");
@@ -33,11 +33,12 @@ const Body = () => {
 
   console.log(listOfRes);
 
-  //return
-  //  listOfRes?.length === 0 ? (
-  //   <Shimmer />
-  // ) : (
   return (
+   listOfRes?.length === 0 ? (
+    <Shimmer />
+  ) 
+  : (
+  // return (
     <div className="body">
       <div className="filter">
         <input
@@ -63,6 +64,7 @@ const Body = () => {
         <button
           onClick={() => {
             setFilteredRestaurantList(listOfRes);
+            setResInput('')
           }}
         >
           View All
@@ -71,9 +73,9 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRes.filter(
-              (res) => res.info.avgRating > 4.2
+              (res) => res.info.avgRating > 4.3
             );
-            setListOfRes(filteredList);
+            setFilteredRestaurantList(filteredList);
           }}
         >
           Top Rated Restaurants
@@ -86,7 +88,7 @@ const Body = () => {
         ))}
       </div>
     </div>
-  );
+  ))
 };
 
 export default Body;
