@@ -4,20 +4,20 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  const [listOfRes, setListOfRes] = useState([]);
-  const [resInput, setResInput] = useState("");
-  const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
-
   useEffect(() => {
     console.log("use effect in effect");
 
     fetchData();
   }, []);
+  const [listOfRes, setListOfRes] = useState([]);
+  const [resInput, setResInput] = useState("");
+  const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
+
 
   const fetchData = async () => {
     const data = await fetch(
       // cors proxy can be used in order to discontinue extensions  
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
